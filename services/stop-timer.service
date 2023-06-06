@@ -1,0 +1,11 @@
+[Unit]
+Description=stop timer
+
+[Service]
+User=ubuntu
+ExecStart=/bin/bash --login -c 'source /home/ubuntu/.bashrc; /home/ubuntu/trr/services/stop-timer.sh'
+KillSignal=2
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target
